@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/aos.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">To-Do List</h1>
+        <div class="task-search">
+            <input type="text" id="task-input" placeholder="Nhập công việc...">
+            <button id="add-task">Thêm</button>
+        </div>
+        <div class="task-filter">
+            <button data-filter="all" class="active">Tất cả</button>
+            <button data-filter="pending">Chưa hoàn thành</button>
+            <button data-filter="completed">Đã hoàn thành</button>
+        </div>
+        <ul class="task-list" id="task-list"></ul>
+    </div>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <script type="text/javascript" src="/js/aos.js"></script>
+</body>
+</html>

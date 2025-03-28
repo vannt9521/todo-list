@@ -1,0 +1,109 @@
+.title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.task {
+  &-search {
+    position: relative;
+    margin-bottom: 26px;
+    input {
+      padding: 10px;
+      padding-right: 0;
+      width: calc(100% - 10px);
+      border: 0;
+      border-bottom: 1.5px solid $color-main;
+      &::placeholder {
+        color: #212D59;
+      }
+    }
+    button {
+      background-color: $color-main;
+      border-color: $color-main;
+      transition: 0.3s ease-in-out;
+      color: $color-white;
+      font-size: 15px;
+      border: 0;
+      padding: 10px 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.65;
+      }
+    }
+  }
+  &-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    button {
+      width: 32%;
+      border: 1px solid #D3D3D4;
+      color: rgba(33,45,89,0.8);
+      transition: 0.3s ease-in-out;
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #fff;
+      cursor: pointer;
+      &:not(.active) {
+        &:hover {
+          opacity: 0.65;
+        }
+      }
+      &.active {
+        background-color: $color-main;
+        border-color: $color-main;
+        color: #fff;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  &-list {
+    padding: 0;
+    li {
+      list-style: none;
+      //background-color: #f1f5fb;
+      border-radius: 5px;
+      padding: 10px 12px;
+      //box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: relative;
+      &:nth-child(2n) {
+        background-color: #f1f5fb;
+      }
+      &:not(.completed) {
+        cursor: pointer;
+        &:hover {
+          color: rgba(33,45,89,0.65);
+        }
+      }
+      &.completed {
+          text-decoration: line-through;
+      }
+      .delete-task {
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 10px;
+        border: 0;
+        background-color: transparent;
+        transition: 0.3s ease-in-out;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        text-align: center;
+        line-height: 20px;
+        z-index: 1;
+        cursor: pointer;
+        &:hover {
+          background-color: #f86365;
+          color: #fff;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
